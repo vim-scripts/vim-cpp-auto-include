@@ -1,0 +1,25 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=4030
+
+For updated information, see https://github.com/quark-zju/vim-cpp-auto-include
+
+Screencast
+====
+https://github.com/quark-zju/vim-cpp-auto-include/raw/master/demo/vim-cpp-auto-include-demo.gif
+
+Note
+====
+This plugin is intended to be simple and intended to be used on simple C++ files only.
+
+Usage
+====
+:w
+
+Configuration
+====
+By default, only C++ files in /tmp are processed.
+
+Add following line in your `.vimrc` to make your C++ code in `/some/path/` processed when saving:
+
+    autocmd BufWritePre /some/path/**.cpp :ruby CppAutoInclude::process
+ 
+If you want more control, feel free to edit the source :)
